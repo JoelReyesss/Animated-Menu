@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(2, 2, 19);
+}
+
+#btn{
+    position: relative;
+    display: inline-flex;
+    padding: 20px 40px;
+    background-color: #363636;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+    margin: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -40%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: purple;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -40%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: yellow;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn3::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%, 50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: aqua;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn4::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: orange;
+    transition: width 0.5s, height 0.5s;
+    
+}
+
+.btn:Hover::before{
+    width: 400px;
+    height: 400px;
+}
+
+h3{
+    position: absolute;
+    left: 48%;
+    bottom: 5%;
+    color: white;
+    font-size: 10px;
+}
+
+@media (max-width: 680px){
+    body{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+}
